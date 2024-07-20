@@ -23,7 +23,7 @@ export default {
             title: 'Brand',
             type: 'array',
             of: [{ type: 'reference', to: [{ type: 'brand' }] }],
-            validation: (Rule) => Rule.required(),
+            // validation: (Rule) => Rule.required(),
         }),
         defineField({
             name: 'imageUrl',
