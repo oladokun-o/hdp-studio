@@ -1,9 +1,9 @@
 import { defineField } from "sanity";
 
-// Equipment Schema
+// Haulage Schema
 export default {
-  name: 'equipment',
-  title: 'Equipment',
+  name: 'cabins',
+  title: 'Porta Cabins',
   type: 'document',
   fields: [
     defineField({
@@ -25,31 +25,31 @@ export default {
       validation: (Rule) => Rule.required(),
     }),
     defineField({
-      name: 'gallery',
-      title: 'Gallery',
-      type: 'array',
-      of: [{type: 'url'}],
-    //   validation: (Rule) => Rule.required(),
+        name: 'gallery',
+        title: 'Gallery',
+        type: 'array',
+        of: [{ type: 'url' }],
     }),
     defineField({
       name: 'qty',
       title: 'Quantity',
       type: 'number',
       hidden: true,
+      initialValue: 0,
     }),
     defineField({
       name: 'amount',
       title: 'Amount',
       type: 'number',
-      initialValue: 0,
       hidden: true,
+      initialValue: 0,
     }),
     defineField({
       name: 'price',
       title: 'Price',
       type: 'number',
       initialValue: 0,
-      hidden: true,
+      hidden: true
     }),
     defineField({
       name: 'prices',
@@ -68,30 +68,10 @@ export default {
       title: 'Meta',
       type: 'object',
       fields: [
-        defineField({
-          name: 'brand',
-          title: 'Brand',
-          type: 'object',
-          //@ts-ignore
-          fields: [
-            defineField({
-              title: 'Equipment Brand',
-              name: 'brand',
-              type: 'reference',
-              to: [{type: 'equipmentManufacturer'}],
-              options: {
-                filter: 'category == $category',
-                filterParams: {category: 'equipment'},
-              },
-            }),
-          ],
-        }),
-        defineField({name: 'weight', title: 'Weight', type: 'string'}),
-        defineField({name: 'usage', title: 'Usage', type: 'string'}),
-        defineField({name: 'model', title: 'Model', type: 'string'}),
-        defineField({name: 'year', title: 'Year', type: 'string'}),
         defineField({name: 'type', title: 'Type', type: 'string'}),
+        defineField({name: 'weight', title: 'Weight', type: 'string'}),
       ],
+      validation: (Rule) => Rule.required(),
     }),
   ],
 }

@@ -3,7 +3,7 @@ import { defineField } from 'sanity'
 // AsphaltProduct Schema
 export default {
     name: 'asphaltProduct',
-    title: 'Asphalt Product',
+    title: 'Products',
     type: 'document',
     fields: [
         defineField({
