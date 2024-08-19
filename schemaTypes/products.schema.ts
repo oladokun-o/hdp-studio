@@ -49,14 +49,14 @@ export default {
             title: 'Amount',
             type: 'number',
             hidden: true,
-            initialValue: 0,
+            initialValue: undefined,
         }),
         defineField({
             name: 'qty',
             title: 'Quantity',
             type: 'number',
             hidden: true,
-            initialValue: 0,
+            initialValue: 1,
         }),
         defineField({
             name: 'meta',
@@ -68,6 +68,12 @@ export default {
                 defineField({ name: 'type', title: 'Type', type: 'string' }),
             ],
         }),
-        
+        defineField({
+            name: 'popular',
+            title: 'Popular',
+            type: 'boolean',
+            description: 'Mark this product as popular',
+            initialValue: false,
+        }),
     ],
 };
