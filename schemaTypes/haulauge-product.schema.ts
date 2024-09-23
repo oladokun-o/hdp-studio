@@ -39,6 +39,29 @@ export default {
             initialValue: 0,
         }),
         defineField({
+            name: 'step',
+            title: 'Step (Quantity)',
+            type: 'number',
+            initialValue: 1,
+            description: 'Step for quantity of product',
+        }),
+        // min and max quantity
+        defineField({
+            name: 'minQty',
+            title: 'Minimum Quantity',
+            type: 'number',
+            initialValue: 1,
+            description: 'Minimum quantity of product',
+            validation: (Rule) => Rule.required(),
+        }),
+        defineField({
+            name: 'maxQty',
+            title: 'Maximum Quantity (optional)',
+            type: 'number',
+            initialValue: 100,
+            description: 'Maximum quantity of product',
+        }),
+        defineField({
             name: 'amount',
             title: 'Amount',
             type: 'number',
