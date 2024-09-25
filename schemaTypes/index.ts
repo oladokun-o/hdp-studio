@@ -10,6 +10,7 @@ import haulaugeProductSchema from './haulauge-product.schema'
 import portaCabinsSchema from './porta-cabins.schema'
 import aboutUs from './aboutUs'
 import services from './services'
+import layoutSchema from './layout.schema'
 
 
 export const schemaTypes = [
@@ -24,5 +25,6 @@ export const schemaTypes = [
     haulaugeProductSchema,
     portaCabinsSchema,
     aboutUs,
-    services
+    services,
+    layoutSchema
 ]
